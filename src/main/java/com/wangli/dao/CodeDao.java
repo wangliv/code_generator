@@ -6,7 +6,7 @@ import org.apache.commons.dbutils.QueryRunner;
 import java.sql.SQLException;
 import java.util.List;
 
-public class CodeDao {
+public final class CodeDao {
 
     private static final CodeDao dao = new CodeDao();
 
