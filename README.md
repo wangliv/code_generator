@@ -26,7 +26,7 @@ Js（特定项目）、JSP（特定项目）。同时在生成代码文件时可
 空间(workspace)中真实项目路径(到项目对应磁盘的绝对路径)，一劳永逸,
 这样代码生成后不用做任何其它的工作，只要启动服务就可以运行。
 
-### 运行效果``````
+### 运行效果
 使用 mvn assembly:assembly 打包后生成code_generator-1.0-SNAPSHOT-jar-with-dependencies.jar
 
 写一个运行脚本(coder_v1.0.bat)放在与jar包同级目录
