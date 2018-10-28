@@ -15,11 +15,10 @@
     </Appenders>
 
     <Loggers>
-        <Logger name="com.wangli" level="info" additivity="false">
+        <logger name="com.*.*" level="error">
             <AppenderRef ref="STDOUT"/>
-        </Logger>
-
-        <Root level="error">
+        </logger>
+        <Root level="off">
             <AppenderRef ref="STDOUT"/>
         </Root>
     </Loggers>
