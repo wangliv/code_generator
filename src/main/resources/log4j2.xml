@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="ERROR">
+    <Appenders>
+        <Console name="STDOUT">
+            <PatternLayout pattern="%m MDC%X%n"/>
+        </Console>
+        <Console name="FLOW">
+            <!-- this pattern outputs class name and line number -->
+            <PatternLayout pattern="%C{1}.%M %m %ex%n"/>
+            <filters>
+                <MarkerFilter marker="FLOW" onMatch="ACCEPT" onMismatch="NEUTRAL"/>
+                <MarkerFilter marker="EXCEPTION" onMatch="ACCEPT" onMismatch="DENY"/>
+            </filters>
+        </Console>
+    </Appenders>
+
+    <Loggers>
+        <Logger name="com.wangli" level="info" additivity="false">
+            <AppenderRef ref="STDOUT"/>
+        </Logger>
+
+        <Root level="error">
+            <AppenderRef ref="STDOUT"/>
+        </Root>
+    </Loggers>
+
+</Configuration>
