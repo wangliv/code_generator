@@ -64,49 +64,6 @@ public class AppTest
         template.process(root,writer);
     }
 
-    @Test
-    public void testB() throws Throwable {
-        File f = new File("D:\\tempwsp");
-        if(!f.exists()){
-            f.mkdirs();
-            System.out.println("i was invoked");
-        }
-    }
-
-    @Test
-    public void testC() throws Exception{
-        String str  = "aaa";
-        String str1 = "aaa";
-        //System.out.println(str==str1);
-
-        String[] arr = {str,str1};
-        IntStream.range(0,2).mapToObj(i -> new Thread(()->{
-            partSync(arr[i]);
-        },str)).forEach(Thread::start);
-
-    }
-
-    public static void main(String[] args) {
-        String str  = "aaa";
-        String str1 = "aaa";
-
-        //System.out.println(str==str1);
-
-        String[] arr = {"aaa","aaa"};
-        IntStream.range(0,2).parallel().mapToObj(i -> new Thread(()->{
-            partSync(arr[i]);
-        },String.valueOf(i))).forEach(Thread::start);
-    }
 
 
-    public static void partSync(String str){
-        synchronized (str){
-            try {
-                System.out.println(Thread.currentThread());
-                TimeUnit.SECONDS.sleep(1);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
-    }
 }
