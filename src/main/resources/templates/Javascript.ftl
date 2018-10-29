@@ -68,6 +68,7 @@ var page${tableName} = {};
 					}
 					if (data) {
 						data = JSON.parse(data);
+						$(".search_result_num>span").html(data.count);
 						callback(data);
 					}
 				},false);

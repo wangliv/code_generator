@@ -13,7 +13,6 @@
     <link rel="stylesheet" type="text/css" href="${r"${"}contextpath${r"}"}/resource/plugin/bootstrap/css/bootstrap.modal.css">
     <link rel="stylesheet" type="text/css" href="${r"${"}contextpath${r"}"}/resource/plugin/jQuery-Validation-Engine-master/css/validationEngine.jquery.css">
     <link rel="stylesheet" type="text/css" href="${r"${"}contextpath${r"}"}<s:theme code='theme'/>base.css" />
-    <!--<link rel="stylesheet" type="text/css" href="${r"${"}contextpath${r"}"}<s:theme code='theme'/>pvip.baseinfomng.baseinfomng.css" /> -->
 
     <script type="text/javascript" src="${r"${"}contextpath${r"}"}/resource/js/znvweb_plugin.js"></script>
     <script type="text/javascript" src="${r"${"}contextpath${r"}"}/resource/plugin/bootstrap/js/wating.mask.js"></script>
@@ -47,6 +46,39 @@
     <script type="text/javascript" src="${r"${"}contextpath${r"}"}/resource/plugin/datepicker/WdatePicker.js"></script>
     <script src="${r"${"}contextpath${r"}"}/resource/plugin/jQuery-Validation-Engine-master/js/languages/jquery.validationEngine-zh_CN.js"></script>
     <script src="${r"${"}contextpath${r"}"}/resource/plugin/jQuery-Validation-Engine-master/js/jquery.validationEngine.js"></script>
+    <style type="text/css">
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+        .btn-primary{
+            height:28px;
+            margin-left:20px;
+            padding:2px 12px;
+        }
+
+        .table_container{
+            margin-top:10px;
+            margin-left:20px;
+            margin-right:20px;
+        }
+
+        .modal-body2{
+            height:auto;
+        }
+        .modal-title2{
+            left:8px !important;
+        }
+
+        .col-sm-6{
+            float:none !important;
+        }
+
+        input[type="text"] {
+            margin-left: 0px;
+            width: 190px;
+        }
+    </style>
 </head>
 <body>
 <div class="table_container" id="table_container">
@@ -66,6 +98,11 @@
         <tbody></tbody>
     </table>
 </div>
+<div class="search_result_div clearfix" >
+    <div class="search_result_num" style="margin-left: 30px;" >
+        <s:message code="scim.vcms.trajectoryanalysis.xtwnzd"></s:message> <span>0</span> <s:message code="scim.vcms.trajectoryanalysis.tsj"></s:message>
+    </div>
+</div>
 
 
 <!-- 查看-->
@@ -84,8 +121,7 @@
       </#if>
      </#list>
 
-        <div class="row" style="height: 60px;" >
-        </div>
+        <div class="row" style="height: 20px;" ></div>
         <div class="row">
             <div class="col-md-5"></div>
             <div class="col-md-4">
@@ -116,7 +152,7 @@
                         <input id="${tableName}_e_${x.columnCamelName}" name="${x.columnCamelName}" type="text" class="validate[<#if x.isNullable=='NO'>required,</#if>maxSize[${x.characterMaximumLength}]]" />
                      <#elseif x.dataType=="date"||x.dataType=="datetime"||x.dataType=="timestamp" >
                         <input class="datepicker Wdate " <#if x.isNullable=='NO'>required=true</#if>  type="text" name="${x.columnCamelName}" id="${tableName}_e_${x.columnCamelName}"
-                               onFocus="WdatePicker({isShowClear:false,readOnly:true,dateFmt:'yyyy-MM-dd HH:mm:ss'})" />
+                               onFocus="WdatePicker({isShowClear:false,readOnly:true,dateFmt:'yyyy-MM-dd'})" />
                      <#else>
                          <input id="${tableName}_e_${x.columnCamelName}" name="${x.columnCamelName}" type="text" class="validate[<#if x.isNullable=='NO'>required</#if>]" />
                      </#if>
@@ -127,11 +163,12 @@
                </div>
             </#if>
         </#list>
+            <div class="row" style="height: 20px;" ></div>
             <div class="row">
                 <div class="col-md-4"></div>
                 <div class="col-md-6">
-                    <div class="submit-workplan btn" onClick = "page${tableName}.submitInfo();">提交</div>
-                    <div class="cancel-workplan btn" onClick = "page${tableName}.closeDlg();" style="margin-left: 12px;">取消</div>
+                    <div class="btn" onClick = "page${tableName}.submitInfo();">提交</div>
+                    <div class="btn" onClick = "page${tableName}.closeDlg();" style="margin-left: 12px;">取消</div>
                 </div>
             </div>
         </div>
