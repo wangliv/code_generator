@@ -159,7 +159,7 @@ var page${tableName} = {};
 			close_content : ZnvWeb._resource['res.common.close'],
 			submit_content : ZnvWeb._resource['res.common.confirm'],
 			submit_click : function() {
-				ZnvWeb.post(ZnvWeb.contextPath + "/site/PVIP/${tableName?lower_case}/delete.ds",JSON.parse(info),
+				ZnvWeb.post(ZnvWeb.contextPath + "/site/PVIP/${tableName?lower_case}/delete.ds",info,
                          function(errorcode,data){
 							data=JSON.parse(data);
 							if(errorcode==0&&data.errorCode!=0){
