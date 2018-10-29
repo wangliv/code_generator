@@ -52,7 +52,6 @@ var page${tableName} = {};
 				"scrollX" : true, // 设置水平滚动
 				"ordering" : true, // 是否允许Datatables开启排序
 				"destroy": true,  //Cannot reinitialise DataTable,解决重新加载表格内容问题
-				fnDrawCallback: TableDrawCallBack
 		};
 
 		table = $('#${tableName}').DataTable($.extend(true, {}, listConfig, {
