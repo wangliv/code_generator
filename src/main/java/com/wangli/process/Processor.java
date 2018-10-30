@@ -76,7 +76,7 @@ public class Processor {
      * @param templateName
      */
     private void createCodeFile(Map<String, Object> root, String path, String outputName, String templateName) {
-        try (Writer writer = new OutputStreamWriter(new FileOutputStream(new File(path, outputName)))) {
+        try (Writer writer = new OutputStreamWriter(new FileOutputStream(new File(path, outputName)),AppConsts.CHAR_SET)) {
             Template template = CFG.getTemplate(templateName);
             template.process(root, writer);
             System.out.printf("==> %s 代码生成，目录：%s\n", outputName, path);
