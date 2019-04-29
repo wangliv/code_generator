@@ -40,4 +40,3 @@ pause
 双击 coder_v1.0.bat
 
 ![效果图](images/run.png)
-
