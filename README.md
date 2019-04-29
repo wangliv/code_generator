@@ -41,4 +41,3 @@ pause
 
 ![效果图](images/run.png)
 
-happy new year!!! time
