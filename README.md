@@ -1,5 +1,5 @@
 ## 代码生成器
-i want to test get merge
+i want to test get merge 工
 >使用场景:springMvc+mybatis+mysql+fastjson 项目
 
 需求：由于手写crud太痛苦,如果字段一多理更无法忍受
