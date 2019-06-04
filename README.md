@@ -1,5 +1,5 @@
 ## 代码生成器
-
+i want to test get merge
 >使用场景:springMvc+mybatis+mysql+fastjson 项目
 
 需求：由于手写crud太痛苦,如果字段一多理更无法忍受
@@ -7,7 +7,7 @@
 来生成crud代码，目标是只需要要少量的配置和输入
 就成生成可用于生产环境运行的代码，根除手写crud的痛苦。
 
-### 生成的的内容
+### 生成的的内容+++++
 + 实体类Bean
 + Dao层接口
 + Service层类
