@@ -7,7 +7,7 @@ i want to test get merge
 来生成crud代码，目标是只需要要少量的配置和输入
 就成生成可用于生产环境运行的代码，根除手写crud的痛苦。
 
-### 生成的的内容+++++
+### 生成的的内容--------
 + 实体类Bean
 + Dao层接口
 + Service层类
@@ -40,3 +40,9 @@ pause
 双击 coder_v1.0.bat
 
 ![效果图](images/run.png)
+<<<<<<< HEAD
+=======
+
+
+happy new year!!! and happy new time
+>>>>>>> master
